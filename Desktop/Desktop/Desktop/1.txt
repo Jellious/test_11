@@ -1,0 +1,7 @@
+
+var newfile_data = {
+                        filename: windowForm.getItemValue("input_filename"),
+                        extension: windowTree.getAttribute(windowTree.getSelectedItemId(), "name")
+                    };
+
+mkFileAtWin(newfile_data) - 파일 생성

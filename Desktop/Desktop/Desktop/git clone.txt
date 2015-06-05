@@ -1,0 +1,14 @@
+git clone git://github.com/schacon/grit.git
+
+var exec    = require('child_process').exec;
+
+socket.on('git_push',function(data){
+	var gitpush = exec("git clone git://github.com/schacon/grit.git",{cwd:rootpath},function(error, stdout, stderr){
+		console.log(name+' stdout: ' + stdout);
+                console.log(name+' stderr: ' + stderr);
+
+                if (error !== null) {
+	                console.log(name+' exec error: ' + error);
+                }
+	});
+});
